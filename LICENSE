@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+===============================================================================
+
+This project also includes code from the tree-sitter project
+(https://tree-sitter.github.io/) which is also licensed under the same MIT 
+License with the copyright attribution of:
+
+Copyright (c) 2018-2023 Max Brunsfeld
+
