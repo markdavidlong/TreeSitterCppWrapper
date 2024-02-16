@@ -1,3 +1,6 @@
 [submodule "tree-sitter"]
 	path = tree-sitter
 	url = https://github.com/markdavidlong/tree-sitter.git
+[submodule "tree-sitter-applesoft"]
+	path = tree-sitter-applesoft
+	url = https://github.com/markdavidlong/tree-sitter-applesoft.git
