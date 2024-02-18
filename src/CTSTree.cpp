@@ -70,7 +70,7 @@ CTSTreeCursor::CTSTreeCursor(CTSNode node) : TSTreeCursor()
 
 CTSTreeCursor::~CTSTreeCursor()
 {
-	// let the library elete the stuff that was allocated in the library.
+	// let the library delete the stuff that was allocated in the library.
 	ts_tree_cursor_delete(this);
 }
 
