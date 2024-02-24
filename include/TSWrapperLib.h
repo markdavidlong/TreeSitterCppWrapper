@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include "CTSLanguage.h"
 #include "CTSNode.h"
