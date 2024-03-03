@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(TSWrapperLib VERSION 0.1.0)
-
+find_package(Qt6 6.6 REQUIRED COMPONENTS Core REQUIRED)
 cmake_policy(SET CMP0079 NEW)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fdeclspec")
 
 #include(CTest)
 #enable_testing()
