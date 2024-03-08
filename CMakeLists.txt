@@ -8,10 +8,9 @@ cmake_policy(SET CMP0079 NEW)
 
 include_directories(
     include
+    tree-sitter/lib/src/
 tree-sitter/lib/include/tree_sitter 
-tree-sitter/lib/include
-tree-sitter/lib/src 
-)
+tree-sitter/lib/include )
 
 file(GLOB tsfiles
     tree-sitter/lib/src/lib.c
