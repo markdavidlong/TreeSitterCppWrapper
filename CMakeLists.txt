@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.5.0)
 project(TSWrapperLib VERSION 0.1.0)
 
 
@@ -23,7 +23,9 @@ cmake_policy(SET CMP0079 NEW)
 include_directories(
     include
     tree-sitter/lib/include/tree_sitter 
-    tree-sitter/lib/include )
+    tree-sitter/lib/include 
+    tree-sitter/lib/src
+)
 
 file(GLOB tsfiles
     tree-sitter/lib/src/lib.c
