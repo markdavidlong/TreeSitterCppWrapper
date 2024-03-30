@@ -4,11 +4,8 @@
 
 CTSNode::CTSNode() : TSNode()
 {
-	for (unsigned int& i : context)
-    {
-        i = 0;
-	}
-	id = nullptr;
+    std::fill_n(context, 4, 0);
+    id = nullptr;
 	tree = nullptr;
 }
 CTSNode::CTSNode(TSNode node) : TSNode()
