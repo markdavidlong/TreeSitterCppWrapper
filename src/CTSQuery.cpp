@@ -5,7 +5,7 @@
 CTSQuery::CTSQuery(const CTSLanguage* lang, const char* oldstr)
 {
     const auto source = std::string(oldstr);
-	m_query = ts_query_new(lang->GetTSLanguage(), source.c_str(), source.length(), &m_error_offset, &m_error_code);
+	m_query = ts_query_new(lang->GetTSLanguage(), source.c_str(), static_cast<uint32_t>(source.length()), &m_error_offset, &m_error_code);
 }
 
 
@@ -144,7 +144,7 @@ void CTSQuery::DisableCapture(const std::string& name) const
 {
 	if (m_query)
 	{
-		ts_query_disable_capture(m_query, name.c_str(), name.length());
+		ts_query_disable_capture(m_query, name.c_str(), static_cast<uint32_t>(name.length()));
 	}
 }
 

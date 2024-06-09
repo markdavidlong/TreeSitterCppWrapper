@@ -63,7 +63,7 @@ uint32_t CTSNode::NamedChildCount() const { return ts_node_named_child_count(*th
 
 CTSNode CTSNode::ChildByFieldName(const std::string& field_name) const
 {
-	return { ts_node_child_by_field_name(*this, field_name.c_str(), field_name.length()) };
+	return { ts_node_child_by_field_name(*this, field_name.c_str(), static_cast<uint32_t>(field_name.length())) };
 }
 
 CTSNode CTSNode::ChildByFieldId(TSFieldId cid) const { return {ts_node_child_by_field_id(*this, cid)}; }

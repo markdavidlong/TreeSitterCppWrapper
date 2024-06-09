@@ -43,7 +43,7 @@ bool CTSParser::SetIncludedRanges(std::vector<TSRange>ranges) const
 {
     const TSRange *items = ranges.data();
 
-    return ts_parser_set_included_ranges(m_self, items, ranges.size());
+    return ts_parser_set_included_ranges(m_self, items, static_cast<uint32_t>(ranges.size()));
 }
 
 std::vector<TSRange>CTSParser::IncludedRanges() const
@@ -77,7 +77,7 @@ std::shared_ptr<CTSTree>CTSParser::ParseString(const std::string& str) const
     return std::make_shared<CTSTree>(ts_parser_parse_string(m_self,
                                                             nullptr,
                                                             str.c_str(),
-                                                            str.length()));
+                                                            static_cast<uint32_t>(str.length())));
 }
 
 std::shared_ptr<CTSTree>CTSParser::ParseString(const std::shared_ptr<CTSTree>& old_tree,
@@ -86,7 +86,7 @@ std::shared_ptr<CTSTree>CTSParser::ParseString(const std::shared_ptr<CTSTree>& o
     return make_shared<CTSTree>(ts_parser_parse_string(m_self,
                                                        old_tree->m_tree,
                                                        str.c_str(),
-                                                       str.length()));
+                                                       static_cast<uint32_t>(str.length())));
 }
 
 #ifdef HANDLE_UTF

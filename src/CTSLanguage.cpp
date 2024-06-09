@@ -23,7 +23,7 @@ TSSymbol CTSLanguage::SymbolForName(const std::string& name, bool is_named) cons
 {
     return m_language ? ts_language_symbol_for_name(m_language,
                                                     name.c_str(),
-                                                    name.length(),
+                                                    static_cast<uint32_t>(name.length()),
                                                     is_named) : 0;
 }
 
@@ -41,7 +41,7 @@ inline std::string CTSLanguage::FieldNameForId(TSFieldId id)  const
 
 TSFieldId CTSLanguage::FieldIdForName(const std::string& name) const
 {
-    return m_language ? ts_language_field_id_for_name(m_language, name.c_str(), name.length()) : 0;
+    return m_language ? ts_language_field_id_for_name(m_language, name.c_str(), static_cast<uint32_t>(name.length())) : 0;
 }
 
 TSSymbolType CTSLanguage::SymbolType(TSSymbol symbol) const
