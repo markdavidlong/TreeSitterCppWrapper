@@ -15,7 +15,6 @@ public:
      */
     CTSNode(TSNode node);
 
-
     /**
      * Get the node's type as a std::string.
      */
